@@ -4,10 +4,10 @@
 /* Scelte comuni: ogni regola usa var() per richiamarne il valore. */
 :root {
   --colore-primario: #205b70;
---colore-primario-scuro: #153f4d;
+  --colore-primario-scuro: #153f4d;
   --colore-sfondo: #f5f2e9;
   --colore-testo: #202923;
-  --font-testo: Arial, Helvetica, sans-serif;
+  --font-testo: "Trebuchet MS", Arial, sans-serif;
   --font-titoli: Georgia, "Times New Roman", serif;
 }
 
