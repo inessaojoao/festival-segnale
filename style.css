@@ -3,11 +3,12 @@
 
 /* Scelte comuni: ogni regola usa var() per richiamarne il valore. */
 :root {
-  --colore-primario: #9C285D;
-  --colore-primario-scuro: #741B45;
-  --colore-sfondo: #f5f2e9;
-  --colore-testo: #202923;
-  --font-testo: "Trebuchet MS", Arial, sans-serif;
+  --colore-primario: #ffa5ab;
+  --colore-primario-scuro: #da627d;
+  --colore-sfondo: #feeac7;
+  --colore-testo: #724319;
+  
+  --font-testo: "Poppins", Arial, sans-serif;
   --font-titoli: Georgia, "Times New Roman", serif;
 }
 
@@ -44,8 +45,44 @@ a:focus-visible {
 }
 
 .site-header {
-  padding: 1.25rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #feeac7;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
   border-bottom: 4px solid var(--colore-primario);
+}
+
+/* Keep the title and menu clear when the links stack on mobile */
+.site-title {
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.site-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media (min-width: 600px) {
+  .site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .site-title {
+    margin-bottom: 0;
+  }
+
+  .site-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
 }
 
 .brand {
@@ -65,13 +102,24 @@ a:focus-visible {
 }
 
 nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem 1.25rem;
   margin-top: 1rem;
 }
 
 nav a {
-  display: inline-block;
-  margin-right: 1rem;
+  display: block;
   padding: 0.25rem 0;
+}
+
+@media (min-width: 600px) {
+  nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
 }
 
 nav a[aria-current="page"] {
@@ -87,9 +135,11 @@ nav a[aria-current="page"] {
   padding: 3rem 0 1rem;
 }
 
-.eyebrow,
+.eyebrow {
+  color: #90a955;
+}
 .event-meta {
-  color: #46564b;
+  color: #90a955;
   font-size: 0.875rem;
   font-weight: bold;
 }
@@ -177,6 +227,7 @@ h3 {
   width: 100%;
   max-width: 100%;
   height: auto;
+  border-radius: 0.75rem;
 }
 
 .event-body {
@@ -200,14 +251,14 @@ h3 {
 }
 
 .event-place {
-  color: #46564b;
+  color: #90a955;
   font-size: 0.875rem;
 }
 
 .site-footer {
   padding: 1.25rem 0;
   border-top: 1px solid #b7c0b7;
-  color: #46564b;
+  color: #90a955;
   font-size: 0.875rem;
 }
 
